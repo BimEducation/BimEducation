@@ -6,14 +6,14 @@
              xmlns:local="clr-namespace:BimEducation.LinkedElementID"
              mc:Ignorable="d" MaxHeight="500" MaxWidth="800" BorderBrush="#59d4ee"
         BorderThickness="2"
-            Width="800" Height="500"  WindowStartupLocation="CenterScreen"
+            Width="400" Height="200"  WindowStartupLocation="CenterScreen"
     WindowStyle="None"  >
     
     <Grid x:Name="MainWindow">
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="50"/>
             <RowDefinition/>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         
         <Grid x:Name="Top" Grid.Row="0">
@@ -28,7 +28,7 @@
             <TextBox  x:Name="Test" Grid.Column="1" Text="LinkedElementId" 
                       HorizontalAlignment="Center"
                       VerticalAlignment="Center"
-                      FontSize="50"/>
+                     />
 
 
         </Grid>
@@ -51,19 +51,19 @@
             <Label   Grid.Column="0" Grid.Row="0" Content="Name" 
            HorizontalAlignment="Left"
            VerticalAlignment="Center"
-           FontSize="50"/>
+           />
             <Label   Grid.Column="0" Grid.Row="1" Content="Id" 
 HorizontalAlignment="Left"
 VerticalAlignment="Center"
-FontSize="50"/>
+/>
             <TextBox   Grid.Column="2" Text="Name of the Element" 
           HorizontalAlignment="Center"
           VerticalAlignment="Center"
-          FontSize="50"/>
+          />
             <TextBox Name="txIdofElement"  Grid.Column="2" Text="Id of the Element" 
 HorizontalAlignment="Center" Grid.Row="1"
 VerticalAlignment="Center"
-FontSize="50"/>
+/>
 
 
         </Grid>
@@ -76,7 +76,7 @@ FontSize="50"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Button Name="txButton" Grid.Column="4" Content="Select" FontSize="50" Click="Button_Click"/>
+            <Button Name="txButton" Grid.Column="4" Content="Select" Click="Button_Click"/>
         </Grid>
     </Grid>
 </Window>
