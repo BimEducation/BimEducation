@@ -16,7 +16,9 @@ namespace BimEducation.LinkedElementID.Module
         public Selection RvtSelection { get; set; }
 
         public Document RvtDocument { get; set; }
-        
+
+        public Document LnkedRvtDocument { get; set; }
+
         public UIOperationLinkedElement(ExternalCommandData externalCommandData)
         {
             ExternalCommandData = externalCommandData;
@@ -24,14 +26,38 @@ namespace BimEducation.LinkedElementID.Module
             RvtSelection = ExternalCommandData.Application.ActiveUIDocument.Selection;
         }
 
+        public void LinkedDocument()
+        {
+            var linkedDoc = new FilteredElementCollector(RvtDocument).OfClass(typeof(RevitLinkInstance));
+            var t = linkedDoc.FirstOrDefault(); 
+            if (t != null)
+            {
+                var l = t as RevitLinkInstance;
+                LnkedRvtDocument = l.GetLinkDocument();
+            }
+        }
+
         public void SelectButton(LinkedElementIdUI uiObj)
         {
             var linkedRef = RvtSelection.PickObject(Autodesk.Revit.UI.Selection.ObjectType.LinkedElement, "Kindly select the Element from LinkedFile");
 
-            var linkedElement = RvtDocument.GetElement(linkedRef).Id;
+         
+            var linkedInstance = RvtDocument.GetElement(linkedRef.ElementId) as RevitLinkInstance;
+            var linkedDoc = linkedInstance.GetLinkDocument();
+            var linkedElementId = linkedRef.LinkedElementId;
+            var linkedElement = linkedDoc.GetElement(linkedElementId);
 
-            uiObj.txIdofElement.Text = linkedElement.ToString();
-            //uiObj.txIdofElement.Text.
+            if (linkedElement != null && uiObj?.txIdofElement != null && uiObj?.txNameofElement != null)
+            {
+                uiObj.txIdofElement.Text = linkedElement.Id.ToString();
+                uiObj.txNameofElement.Text = linkedElement.Name;
+            }
+            else
+            {
+                TaskDialog.Show("Error", "Failed to retrieve linked element or update UI.");
+            }
+
+
         }
 
     }

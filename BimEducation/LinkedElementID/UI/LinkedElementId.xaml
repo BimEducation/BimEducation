@@ -56,7 +56,7 @@
 HorizontalAlignment="Left"
 VerticalAlignment="Center"
 />
-            <TextBox   Grid.Column="2" Text="Name of the Element" 
+            <TextBox  Name="txNameofElement" Grid.Column="2" Text="Name of the Element" 
           HorizontalAlignment="Center"
           VerticalAlignment="Center"
           />
