@@ -1,0 +1,13 @@
+<Ribbon>
+  <Tab Name="BimEducation" Title="My Custom Tab">
+    <Panel Name="Coordination" Title="My Panel">
+
+      <Button Name="Login" Title="Login" ToolTip="This is Login button to access the tools" Image="Resources/Hello.jpg" Command="BimEducation.Login_Page.LoginCommand" />
+      <Button Name="AboutUs" Title="AboutUs" ToolTip="This is About our Team" Image="Resources/Hello.jpg" Command="BimEducation.AboutTeam.AboutTeamEngine" />
+      <Button Name="HelloWorld" Title="Hello World" ToolTip="This is Hellowold" Image="Resources/Hello.jpg" Command="BimEducation.Helloworld.HellowWorldEngine" />
+      <Button Name="LinkElementId" Title="LinkedElementId" ToolTip="We can Get Id of Linked Element" Image="Resources/Hello.jpg" Command="BimEducation.LinkedElementID.LinkedElementIDEngine" />
+      
+      
+    </Panel>
+  </Tab>
+</Ribbon>
