@@ -25,6 +25,8 @@ namespace BimEducation.LinkedElementID
 
             var uIOperationObj = new UIOperationLinkedElement(commandData);
 
+            //var linkedDoc = 
+
             var linkedElementIdUIObj = new LinkedElementIdUI(uIOperationObj);
             linkedElementIdUIObj.DataContext = uIOperationObj;
             linkedElementIdUIObj.Show();

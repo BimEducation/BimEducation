@@ -19,7 +19,7 @@ namespace BimEducation.Login_Page
                 LoginUI loginWindow = new LoginUI();
                 loginWindow.ShowDialog();
 
-#if false
+#if true
                 if (!loginWindow.IsAuthorized)
                 {
                     TaskDialog.Show("Login Failed", "Invalid credentials. Tools remain disabled.");

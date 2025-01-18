@@ -1,0 +1,13 @@
+D:\Learning\Git\BimEducation\bin\Debug_R2023\BimEducation.dll
+D:\Learning\Git\BimEducation\bin\Debug_R2023\BimEducation.pdb
+D:\Learning\Git\BimEducation\obj\Debug_R2023\BimEducation.csproj.AssemblyReference.cache
+D:\Learning\Git\BimEducation\obj\Debug_R2023\LinkedElementID\UI\LinkedElementId.g.cs
+D:\Learning\Git\BimEducation\obj\Debug_R2023\Login Page\LoginUI.g.cs
+D:\Learning\Git\BimEducation\obj\Debug_R2023\BimEducation_MarkupCompile.cache
+D:\Learning\Git\BimEducation\obj\Debug_R2023\BimEducation_MarkupCompile.lref
+D:\Learning\Git\BimEducation\obj\Debug_R2023\LinkedElementID\UI\LinkedElementId.baml
+D:\Learning\Git\BimEducation\obj\Debug_R2023\Login Page\LoginUI.baml
+D:\Learning\Git\BimEducation\obj\Debug_R2023\BimEducation.g.resources
+D:\Learning\Git\BimEducation\obj\Debug_R2023\BimEducation.csproj.CoreCompileInputs.cache
+D:\Learning\Git\BimEducation\obj\Debug_R2023\BimEducation.dll
+D:\Learning\Git\BimEducation\obj\Debug_R2023\BimEducation.pdb
