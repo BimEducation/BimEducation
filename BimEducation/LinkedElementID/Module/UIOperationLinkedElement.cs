@@ -26,17 +26,7 @@ namespace BimEducation.LinkedElementID.Module
             RvtSelection = ExternalCommandData.Application.ActiveUIDocument.Selection;
         }
 
-        public void LinkedDocument()
-        {
-            var linkedDoc = new FilteredElementCollector(RvtDocument).OfClass(typeof(RevitLinkInstance));
-            var t = linkedDoc.FirstOrDefault(); 
-            if (t != null)
-            {
-                var l = t as RevitLinkInstance;
-                LnkedRvtDocument = l.GetLinkDocument();
-            }
-        }
-
+        
         public void SelectButton(LinkedElementIdUI uiObj)
         {
             var linkedRef = RvtSelection.PickObject(Autodesk.Revit.UI.Selection.ObjectType.LinkedElement, "Kindly select the Element from LinkedFile");
